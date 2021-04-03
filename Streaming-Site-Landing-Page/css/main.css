@@ -1,0 +1,386 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: 'Montserrat', sans-serif;
+}
+
+/*Custom Properties*/
+:root {
+	--bot_border: 2px solid #c7c7c7;
+}
+
+
+#header {
+	width: 94%;
+	margin: 0 auto;
+	background: #fff;
+	border-bottom: var(--bot_border);
+	display: flex;
+	flex-wrap: wrap;
+}
+.logo {
+	flex-basis: 25%;
+	align-self: center;
+}
+.logo a {
+	width: 140px;
+	display: block;
+}
+.logo a img {
+	width: 100%;
+}
+#header .main-menu {
+	flex-basis: 75%;
+	display: flex;
+	flex-wrap: wrap;
+}
+#header .main-menu .menu {
+	flex-basis: 70%;
+	text-align: right;
+	align-self: center;
+}
+#header .main-menu .menu ul {
+	display: block;
+	padding: 12px 0;
+}
+#header .main-menu .menu nav ul li {
+	display: inline-block;
+}
+#header .main-menu .menu nav ul li a {
+	text-decoration: none;
+	color: #000;
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-left: 10px;
+	position: relative;
+	z-index: 1;
+	transition: color 0.5s;
+}
+#header .main-menu .menu nav ul li a span {
+	width: 0%;
+	height: 4px;
+	position: absolute;
+	bottom: -2px;
+	right: 0;
+	background: #000;
+	z-index: -1;
+	transition: 0.5s;
+}
+#header .main-menu .menu nav ul li a:hover span {
+	width: 100%;
+}
+#header .main-menu .btns {
+	flex-basis: 30%;
+	padding: 12px 0;
+	text-align: right;
+}
+
+#menu_btn {
+	width: 40px;
+	height: 40px;
+	text-align: center;
+	background: #000;
+	position: fixed;
+	right: 3%;
+	top: 10px;
+	border-radius: 4px;
+	z-index: 3;
+	cursor: pointer;
+	opacity: 0;
+}
+#menu_btn img {
+	width: 20px;
+	margin-top: 10px; 
+}
+
+/*Universal Section Style*/
+.art-container {
+	width: 94%;
+	margin: auto;
+	padding: 40px 0;
+	display: grid;
+	grid-template-rows: repeat(1, 100%);
+	grid-template-columns: repeat(2, 50%);
+	grid-template-areas: "bowl content";
+	border-bottom: var(--bot_border);
+}
+.art-container .art-text {
+	align-self: center;
+	grid-area: bowl;
+}
+.art-container .art-img {
+	grid-area: content;
+}
+.art-container .art-text h1 {
+	margin-bottom: 20px;
+}
+.art-container .art-text p {
+	font-size: 16px;
+	margin-bottom: 20px;
+}
+.art-container .art-text ul {
+	display: block;
+	margin-left: 40px;
+	font-size: 14px;
+}
+.art-container .art-img img {
+	width: 80%;
+	margin: auto;
+	display: block;
+}
+
+/*Right Side Article Section (Audio, Video)*/
+
+#audio-sec .art-text, #video-sec .art-text {
+	grid-area: content;
+}
+#audio-sec .art-img, #video-sec .art-img {
+	grid-area: bowl;
+}
+
+/*Ready to start Section Center*/
+#ready-sec {
+	width: 94%;
+	margin: auto;
+	text-align: center;
+	padding-top: 40px;
+	border-bottom: var(--bot_border);
+}
+#ready-sec h1 {
+
+}
+#ready-sec .ready-img {
+	width: 80%;
+	margin: auto;
+	position: relative;
+}
+#ready-sec .ready-img img {
+	width: 100%;
+	margin-bottom: -4px;
+}
+#ready-sec .ready-img #ready-btn {
+	position: absolute;
+	top: 30%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);
+}
+
+
+/*Footer Section*/
+#footer {
+	padding: 40px 0;
+}
+#footer .footer-container {
+	width: 94%;
+	margin: auto;
+	display: flex;
+	flex-wrap: wrap;
+}
+#footer .footer-container .f-info {
+	flex-basis: 28%;
+}
+#footer .footer-container .footer-divs {
+	flex-basis: 18%;
+}
+#footer .footer-container span {
+	display: flex;
+	font-size: 12px;
+	line-height: 2em;
+}
+#footer .footer-container h3 {
+	text-transform: uppercase;
+	line-height: 3em;
+}
+#footer .footer-container .f-info .terms-link {
+	text-decoration: underline;
+	color: #000;
+	font-size: 14px;
+}
+#footer .footer-container .f-info .social-links {
+	margin-top: 40px;
+}
+#footer .footer-container .f-info .social-links .fab {
+	margin-right: 10px;
+	font-size: 20px;
+	cursor: pointer;
+	color: #ffc107;
+	transition: 0.5s;
+}
+#footer .footer-container .f-info .social-links .fab:hover {
+	transform: translateY(-3px);
+}
+
+/*FAQs Section*/
+#faq-sec {
+	width: 94%;
+	margin: auto;
+	padding: 40px 0;
+	border-bottom: var(--bot_border);
+}
+#faq-sec h1 {
+	margin: 40px 0;
+}
+#faq-sec .faq-img {
+	width: 100%;
+}
+#faq-sec .faq-img img {
+	width: 100%;
+	display: none;
+}
+#faq-sec .faq-questions {
+	width: 80%;
+	margin: auto;
+}
+#faq-sec .faq-questions .faq-q {
+	padding: 10px 0;
+	margin-top: 20px;
+	position: relative;
+	border-bottom: 1px solid #c7c7c7;
+	cursor: pointer;
+}
+#faq-sec .faq-questions .faq-q h2 {
+	font-size: 20px;
+	padding-right: 40px;
+}
+#faq-sec .faq-questions .faq-q .fas {
+	position: absolute;
+	right: 0px;
+	top: 0px;
+	font-size: 20px;
+	padding: 10px;
+}
+#faq-sec .faq-questions .faq-a {
+	font-size: 14px;
+	margin-top: 20px;
+	transition: 0.5s;
+}
+
+
+
+/*Buttons*/
+.btn1 {
+	padding: 10px;
+	background: #000;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	border: 1px solid #000;
+	border-radius: 6px;
+	cursor: pointer;
+}
+.btn1:hover {
+	box-shadow: 0 6px 10px 1px #00000070;
+	transition: .5s;
+}
+
+
+
+/*Responsive Media Queries*/
+@media screen and (max-width: 830px) {
+	#header .logo {
+		flex-basis: 100%;
+	}
+	#header .logo a {
+		margin: auto;
+	}
+	#header .main-menu {
+		flex-basis: 100%;
+		margin-top: -10px;
+	}
+	#header .main-menu .menu {
+		text-align: left;
+	}
+	/*Universal Article Section*/
+	.art-container .art-img img {
+		width: 100%;
+	}
+	/*Ready To Start Section*/
+	#ready-sec .ready-img {
+		width: 90%;
+	}
+	/*Footer Section*/
+	#footer .footer-container .f-info {
+		flex-basis: 100%;
+	}
+	#footer .footer-container .footer-divs {
+		flex-basis: 25%;
+	}
+}
+
+
+@media screen and (max-width: 530px) {
+	#header {
+		height: 60px;
+	}
+	#header .logo {
+		margin-right: 50px;
+	}
+	#header .main-menu {
+		width: 250px;
+		height: 100vh;
+		position: fixed;
+		right: -250px;
+		top: 0;
+		background: #ffbc00;
+		z-index: 2;
+		transition: 0.5s;
+		margin-top: 0;
+	}
+	#header .main-menu .menu {
+		flex-basis: 100%;
+		margin-top: -40%;
+	}
+	#header .main-menu .btns {
+		flex-basis: 100%;
+		text-align: center;
+	}
+	#header .main-menu .menu nav ul li {
+		list-style: none;
+		margin: 20px;
+		display: block;
+	}
+	#header .main-menu .menu nav ul li a {
+		text-decoration: none;
+		color: #000;
+		margin-left: 0;
+	}
+	#header .main-menu .btns {
+		margin-top: -60%;
+	}
+	#menu_btn {
+		opacity: 1;
+	}
+	/*Universal Article Section*/
+	.art-container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.art-container .art-text {
+		flex-basis: 100%;
+	}
+	.art-container .art-img {
+		flex-basis: 100%;
+		margin-top: 20px;
+	}
+	/*Ready To Start Section*/
+	#ready-sec .ready-img {
+		width: 100%;
+	}
+	/*FAQs Section*/
+	#faq-sec .faq-questions {
+		width: 100%;
+	}
+	/*Footer Section*/
+	#footer .footer-container .footer-divs {
+		flex-basis: 50%;
+	}
+	/*Buttons*/
+	.btn1 {
+		font-size: 12px;
+	}
+}
+
